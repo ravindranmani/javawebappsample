@@ -37,9 +37,9 @@ node {
       // Deploy WAR using Azure CLI (Linux-supported)
       sh """
       az webapp deploy \
-        --resource-group ${resourceGroup} \
-        --name ${webAppName} \
-        --src-path target/calculator-1.0.war \
+        --resource-group jenkins-get-started-rg \
+        --name jenkins-get-started-app-mani \
+        --src-path /var/lib/jenkins/workspace/MyFirstPipeline/target/calculator-1.0.war \
         --type war \
         --target-path webapps/calculator-1.0.war
       """
